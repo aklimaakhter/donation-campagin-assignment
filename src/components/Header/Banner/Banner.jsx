@@ -1,4 +1,4 @@
-import bannerImage from "../../../assets/images/Clothing.png"
+import bannerImage from "../../../assets/images/background-image.jpg"
 
 const Banner = () => {
     return (
@@ -7,7 +7,7 @@ const Banner = () => {
                 <div className="relative w-full ">
                     <img className="w-full h-[60vh]" src={bannerImage} alt="" />
                 </div>
-                <div className="hero-overlay h-[60vh] bg-opacity-70 absolute "></div>
+                <div className="hero-overlay h-[60vh] bg-opacity-80 absolute "></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="">
                         <h1 className="mb-5 text-5xl font-bold">I Grow By Helping People In Need</h1>
