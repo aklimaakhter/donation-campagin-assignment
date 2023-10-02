@@ -17,7 +17,7 @@ const Card = ({ card }) => {
         <div>
             <Link to={`/cards/${id}`}>
                 <div className='card card-compact bg-base-100 shadow-xl' style={cardStyle} >
-                    <figure><img src={image} alt="Shoes" /></figure>
+                    <figure><img src={image} alt="Image" /></figure>
                     <div className="card-body">
 
                         <button><p className="py-2 px-4 w-1/3 rounded flex  justify-center items-center" style={categoryStyle} >{category}</p></button>
