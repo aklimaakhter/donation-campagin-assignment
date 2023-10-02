@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import swal from "sweetalert";
+
 const CardDetail = ({ card }) => {
     const {id, image, title, description, price, buttonBgColor } = card || {};
     const buttonStyle = {
@@ -8,21 +10,26 @@ const CardDetail = ({ card }) => {
     };
 
     const handleDonation = () => {
+
         const addedDonationCard = [];
+
         const donationCard = JSON.parse(localStorage.getItem('donate'));
+
         if (!donationCard) {
             addedDonationCard.push(card);
             localStorage.setItem('donate', JSON.stringify(addedDonationCard));
+            swal("Good job!", "You have successfully added", "success");
         }
         else {
             const isExits = donationCard.find(card => card.id === id);
+
             if (!isExits) {
                 addedDonationCard.push(...donationCard, card);
                 localStorage.setItem('donate', JSON.stringify(addedDonationCard));
-                alert('card added')
+                swal("Good job!", "You have successfully added", "success");
             }
             else{
-                alert('already added')
+                swal("Error!", "No duplicate!", "error");
             }
 
         }
